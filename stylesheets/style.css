@@ -102,7 +102,7 @@ cursor: pointer;
     position:relative;
     width:100%;
     color:var(--textWhite);
-    font-family: var(--headerFont);
+    font-family: "autumn-moose";
     background-color: var(--gray);
 
 }
