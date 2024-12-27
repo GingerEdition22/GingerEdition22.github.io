@@ -9,7 +9,6 @@
 }
 .projectPanel:hover{
     box-shadow:  0 5px 20px rgba(var(--yellow),0.08), 0 15px 60px rgba(var(--yellow),0.4);
-    cursor: pointer;
     transform: translate(10px,10px);
 }
 .projectPanel img{
