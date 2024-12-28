@@ -1,15 +1,27 @@
 .projectPanel{
+    all:revert;
+    text-decoration: none;
+    font-family: var();
     margin:auto;
-    background-color: white;
+    border-radius: 25px;
+    border: 5px solid var(--yellow);
     width:70%;
     height:250px;
     display:flex;
     align-items: center;
     transition: 400ms;
 }
+
 .projectPanel:hover{
-    box-shadow:  0 5px 20px rgba(var(--yellow),0.08), 0 15px 60px rgba(var(--yellow),0.4);
     transform: translate(10px,10px);
+}
+.projectPanel p{
+    color:var(--yellow);
+    font-family: var(--sansSemiBold);
+}
+.projectPanel h1{
+    color: var(--yellow);
+    font-family: var(--headerFont);
 }
 .projectPanel img{
 height:80%;
