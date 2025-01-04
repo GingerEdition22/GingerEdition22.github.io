@@ -12,11 +12,11 @@
 }
 :root{
 --gray:#111;
---yellow:rgb(234,159,80);
+--mainColor:rgb(234,159,80);
 --textWhite: #fff;
 --navHoverBg:#f8f8f800;
 --navHoverTxt: var(--gray);
---navActive: var(--yellow);
+--navActive: var(--mainColor);
 --siteBg:var(--gray);
 --navTop:20px;
 --headerFont: "autumn-moose";
@@ -34,20 +34,23 @@ body{
     padding:0;
     background-color: var(--siteBg);
 }
-
-.yellow{
-    color:var(--yellow);
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--headerFont);
 }
-a{
+li{
+    font-family: var(--sans);
+}
+
+a:not(.unlink):not(.linkedimage):not(.projectPanel):not(.navlinks a){
     position:relative;
     display:inline-block;
-    color:var(--yellow);
+    color:var(--mainColor);
     z-index: 1;
     transition: 500ms;
     text-decoration: none;
 }
 
-a::after {
+a:not(.unlink):not(.linkedimage):not(.projectPanel):not(.navlinks a)::after {
     z-index: -1;
     content: "";
     position: absolute;
@@ -55,7 +58,7 @@ a::after {
     left: 0;
     width: 100%;
     height: 0.1em;
-    background-color: var(--yellow);
+    background-color: var(--mainColor);
     opacity: 0;
     transform: scaleX(0);
     transform-origin: left;
@@ -63,12 +66,12 @@ a::after {
 }
 
 
-a:hover::after {
+a:not(.unlink):not(.linkedimage):not(.projectPanel):not(.hamburger):not(.navlinks a):hover::after {
     opacity: 1;
     transform: scaleX(1); 
     transform-origin: left;
 }
-a:not(:hover)::after{
+a:not(.unlink):not(.linkedimage):not(:hover):not(.projectPanel):not(.navlinks a)::after{
     opacity: 0;
     transform: scaleX(0); 
     transform-origin: right;
@@ -122,8 +125,22 @@ h3{
     transform: translateY(1vh);
 }
 .content{
-    background-color: #FFF;
-    height:1000px;
+margin-left:100px;
+margin-right:100px;
+}
+.contentBg{
+    padding-top:50px;
+    padding-bottom: 50px;
+    margin-top:100px;
+    width:100%;
+    background-color:white;
+}
+.contentBgDark{
+    padding-top:50px;
+    padding-bottom: 50px;
+    width:100%;
+    background-color:var(--gray);
+    color:var(--textWhite);
 }
 .captioned img{
     border: 5px solid var(--gray);
@@ -142,4 +159,69 @@ h3{
 .displaytable td{
     vertical-align: top;
     width:50vw;
+}
+.aboutBox{
+    margin-left: 100px;
+    margin-right:100px;
+    margin-bottom: 100px;
+    display: flex;
+    
+}
+.portrait{
+    width:30%;
+}
+.aboutBox p{
+    color:var(--textWhite);
+    font-family: var(--sans);
+    margin-left: 15px;
+    
+}
+
+.footer{
+    margin-top: 20px;
+    background-color: var(--gray);
+    height:400px;
+    width: 100%;
+}
+.footer p{
+    margin-left:20px;
+    color:var(--mainColor);
+    font-family: var(--sans);
+}
+.yellow{
+    color:var(--mainColor);
+}
+.gold,.gold h1, .gold p, .gold span, .gold a, h1.gold, p.gold, a.gold,span.gold{
+    color:var(--gold);
+    border-color: var(--gold);
+}
+@media screen and (max-width: 600px){
+    body{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .aboutBox{
+        margin-left:25px;
+        margin-right:25px;
+    }
+    #landingtext{
+        margin-left:25px;
+        margin-right:25px;
+    }
+    .content{
+        margin-left:25px;
+        margin-right:25px;
+    }
+    .projectPanel{
+        flex-direction: column;
+        height:auto;
+        width:70%;
+    }
+    .projectPanel img{
+        height:auto;
+        width:50%;
+        padding:0px;
+    }
 }

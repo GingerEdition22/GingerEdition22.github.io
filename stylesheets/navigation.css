@@ -1,24 +1,35 @@
+.navBackground{
+    background-color: var(--gray);
+    height: 90px;
+    width:100%;
+    position: fixed;
+    z-index: 100;
+}
 .topnav{
     position:fixed;
+    display: flex;
     z-index:10;
     margin-top:var(--navTop);
     top:0px;
     width:100%;
     margin-left:100px;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-family: var(--sansSemiBold);
 }
 .logo{
     position:absolute;
     left:0px;
+    top:5px;
   float: left;
     height:40px;
-    transition: 500ms;
+    transition: transform 500ms;
 }
 .logo:hover{
     transform: rotate(45deg);
 }
 .navlinks{
     margin-left:50px;
+    display:flex;
+    
 }
 
 .page{
@@ -40,7 +51,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     left:0;
     width:100%;
     height:0.1em;
-    background-color:var(--yellow);
+    background-color:var(--mainColor);
     opacity: 0;
     transform: scaleX(0);
     transition: opacity 400ms, transform 500ms;
@@ -55,9 +66,10 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     opacity:0;
     transform: scaleX(0);
     transform-origin: right;
+    
 }
 .navlinks a:hover{
-color: var(--yellow);
+color: var(--mainColor);
 }
 .navlinks a.active{
     color:white;
@@ -78,42 +90,124 @@ color: var(--yellow);
     display:none;
 }
 #navsocial{
-    display: inline;
-    position: relative;
+    position: absolute;
     float:right;
     right:150px;
+    margin-top:2px;
 }
 #navsocial a{
     display:inline;
 }
 #navsocial img{
     height:37px;
-    margin-top:8px;
     margin-left:10px;
     transition: 500ms;
 }
 #navsocial img:hover{
     transform: rotate(20deg);
 }
-/*
-@media screen and (max-width: 600px){
-    .topnav a:not(:first-child){display:none;}
-    .topnav a.icon{
-        float:right;
-        display:block;
+
+.closeButton{
+    transform: scale(0);
+    width:0;
 }
-}
-@media screen and (max-width:600px){
-    .topnav.responsive{position: relative;}
-    .topnav.responsive a.icon{
-        position:absolute;
-        right:0;
-        top:0;
+    .hamburger{
+        transform: scale(0);
+        transition: 0ms;
     }
-    .topnav.responsive a{
-        float:none;
-        display: block;
-        text-align: left;
+    @media screen and (max-width: 750px){
+        .navlinks{
+            flex-direction: column;
+            display:flex;
+            width:100%;
+            height:0vh;
+            transform:scale(0);
+            align-items: center;
+            padding:0;
+            margin:0;
+        }
+        .navlinks a{
+            width:100%;
+        }
+        .logo{
+        margin-left:25px;
+        }
+        .navBackground{
+            height:50px;
+        }
+        .topnav{
+            width:100%;
+            left:0;
+            margin:0;
+            padding:0;
+            position:relative;
+        }
+        .hamburger{
+            position: absolute;
+            display: block;
+            top:100%;
+            right:10px;
+            transform: scale(1);
+            font-size: 30px;
+            cursor: pointer;
+            transition: 0ms;
+        }
+        .hamburger:hover:after{
+           transform: scale(0);
+        }
+        .closeButton{
+            width:revert;
+            transform: scale(1);
+            color:var(--textWhite);
+            background-color: var(--mainColor);
+            border: 3px solid var(--mainColor);
+            margin-right:14px;
+            float:left;
+            position:relative;
+            display:block;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            line-height: 1;
+            transition: 500ms;
+        }
+        .closeButton:hover{
+            color:var(--mainColor);
+            background-color: var(--gray);
+            border: 3px solid var(--mainColor);
+            text-decoration: none;
+        }
+        .closeButton:hover::after, .closeButton::after{
+            width:0;
+        }
+        .navlinks a.active::after{
+            content:"";
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:100%;
+            height:0.1em;
+            background-color:var(--mainColor);
+            opacity: 0;
+            transform: scaleX(0);
+            transition: opacity 400ms, transform 500ms;
+        }
+        .navlinks a.active:hover::after{
+            opacity:1;
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        .navlinks a.active:not(hover)::after,
+        .navlinks a.active:not(focus)::after{
+            opacity:0;
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+        .navlinks a.active:hover{
+        color: var(--mainColor);
+        }
+        #navsocial{
+            display:none;
+        }
     }
-}
-    */

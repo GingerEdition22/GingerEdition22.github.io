@@ -6,3 +6,5 @@ function scrollToEndOfSection() {
       behavior: 'smooth'   // Smooth scrolling
     });
   }
+
+  

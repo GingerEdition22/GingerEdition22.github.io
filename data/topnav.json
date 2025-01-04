@@ -1,0 +1,23 @@
+[
+    {
+        "text":"Home",
+        "visible":true,
+        "link":"index.html",
+        "dataPage":"index",
+        "class":"page"
+    },
+    {
+        "text":"About",
+        "visible":true,
+        "link":"about.html",
+        "dataPage":"about",
+        "class":"page"
+    },
+    {
+        "text":"My work",
+        "visible":true,
+        "link":"projects.html",
+        "dataPage":"project",
+        "class":"page"
+    }
+]
