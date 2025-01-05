@@ -1,8 +1,13 @@
-[
-    {"name":"Meneely Meese",
-        "header":"Meneely Meese",
+[{        "header":"This website",
+"visible":true,
+"target":"_blank",
+"body":"Yeah. I kind of did make this too.",
+"image":"images/BeeYellow.png",
+"link":"https://github.com/GingerEdition22/GingerEdition22.github.io"
+},
+    { "header":"Family Logos",
     "visible":true,
-"body":"A branding project for one of my high school's 'family' groups",
+"body":"A branding project for several of my high school's 'family' groups",
 "image":"MeneelyMeese/MeneelyMeeseDigital_Main-Blue.png",
 "link":"MeneelyMeese.html"
 },
@@ -40,5 +45,12 @@
 "body":"A simple unfinished ocean exploration game",
 "image":"images/DiscoveryDepthsLogo.svg",
 "link":"https://ntacs.itch.io/discovery-depths"
+},
+{        "header":"The Messaging System",
+    "visible":true,
+"body":"A system for sending and recived text messages with Google Sheets. Built as an experiment for the capabilities of Sheets and Shortcuts.",
+"image":"images/GutsquareIconWhite.png",
+"link":"https://ntacs.itch.io/discovery-depths"
 }
+
 ]

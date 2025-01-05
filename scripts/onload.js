@@ -48,9 +48,11 @@ function loadTopNav(){
           data.forEach(link=>{
               if(link.visible){
                 const linkElement = document.createElement("a");
+                if(link.link){
                 linkElement.href = link.link;
+                }
                 linkElement.dataset.page = link.dataPage;
-
+                linkElement.onclick = link.onclick;
                 const classes = link.class.split(" ");
                 classes.forEach(className =>{
                     linkElement.classList.add(className);

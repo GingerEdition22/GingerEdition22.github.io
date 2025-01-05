@@ -9,9 +9,9 @@
     {
         "text":"About",
         "visible":true,
-        "link":"about.html",
         "dataPage":"about",
-        "class":"page"
+        "class":"page",
+        "onclick":"scrollToAbout"
     },
     {
         "text":"My work",
