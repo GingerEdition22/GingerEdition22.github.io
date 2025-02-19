@@ -1,48 +1,62 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Goldfuss</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/navigation.css">
-    <link rel="stylesheet" href = "stylesheets/projects.css">
-    <link rel="stylesheet" href = "stylesheets/projects.css">
-    <link rel="stylesheet" href = "stylesheets/footer.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <script src="scripts/scrolling.js"></script>
-    <script src = "scripts/onload.js"></script>
-    <script src = "scripts/other.js"></script>
+    <link rel="stylesheet" href="stylesheets/projects.css">
+    <link rel="icon" type="image/png" href="bees/favicon.png">
+    <script src="scripts/onload.js"></script>
+    
 </head>
 
+<body onload="onPageLoad()">
 
-<body onload = "onLoadFunc()" data-page = "index" data-load-page = "index">
 
-<div id = "navContainer"></div>
+    <div class="topnav" id="navbar">
+        <a class="linkedimage" href="index.html"><img src="images/BeeYellow.png" class="logo"></a>
+       <!-- <div class="navlinks">
+            <a href="index.html" class="active page">Home</a>
+            <a href="#about" class="page">About</a>
+            <a href="#mywork" class="page">My work</a>
+            <a href="javascript:void(0);" class="icon" onclick="smallNav()">☰</a>
+        </div>
+    -->
+        <div id = "navsocial">
+            <a href="https://github.com/GingerEdition22" target = "_blank" class="linkedimage"><img src = "social/github-mark-white.png"></a>
+            <a href="https://www.instagram.com/david.goldfuss/" target = "_blank" class="linkedimage"><img src = "social/Instagram_Glyph_White.png"></a>
+            <a href="mailto:davidgoldfuss@outlook.com" target = "_blank" class="linkedimage"><img src = "social/EmailIcon.png"></a>
+            <a href="https://dribbble.com/GingerEdition" target = "_blank" class="linkedimage"><img src = "social/dribbble.png"></a>
 
-    <div id="landing">
-        <div id="landingtext" >
-            <h1>Hello there.</h1>
-            <h1>I'm <span class="yellow">Davvav </span></h1>
-            <h2> Yes, I made <a class="yellow" href="AutumnMoose.html">this font</a></h2>
-        </div><!--end landing text-->
-
-        <div class="themePicker">
-            <h3> Hey you can pick a new theme color here →</h3>
-        <input type = "color" id = "themeColorPicker" onchange = "changeThemeColor()" value="#FFFFFF">
-            </div>
-
-    </div><!--end landing-->
-    <div class="aboutBox">
-        <img src = "images/portrait.jpg" class="portrait">
-        <p>I'm a programmer 🧑‍💻and graphic designer 🎨 as well as a senior in high school. 
-            I specialize in logo and branding design (you can see some examples below). 
-            I love metros 🚉(you know, subways), think pinapple belongs on pizza 🍕, and think JavaScript
-             is an abomination (Java's the best if you're curious). 
-             Oh, what's the bee about? Here I'll <a href="#sadBee">tell you</a>.</p>
+        </div>
     </div>
-    <div class = "contentBgDark">
-        <div class = "blocksContainer"></div>
-  </div>
-  <div id = "footer">
+    <div class="landing">
+        <img src = "images/Circle.png" class="circle"> 
+        <table>
+            <tr>
+            <td class ="imageCell">
+                <img src="images/house.png">
+                <p class = "streak" id = "streak">CEA</p>
+            </td>
+            <td class="welcomeText">
+    
+                    <h1>David</h1>
+                    <h1>Goldfuss</h1>
+            </td>
+            </tr>
+        
+        </table>
+    </div>
+<div class = "content">
+    <h1>Me</h1>
+    <p>I have always been a fan of good design. Throughout my life I spend significant thought on ensuring everything is arranged in a logical and precise manner. This has greatly influenced my philosophy of design. Everything I design is built to look good, function nicely, and be practical in nature. This has remained especially true in the Engineering pathway. Throughout these classes I have always attempted to invest copious amounts of extra time into projects and added extra effort into ensuring every final product is to the highest standard. I have had many successes over the years, especially when it came to designing objects. I am particularly proud of my chess set and lake house. In addition I have grown and learned a lot from the Habitat For Humanity project this year. This project has allowed me to grow in my understanding of cohesive design where each section of the house plays its part. These lessons I have learned of problem solving and dedication are something that I want to carry with me into the future as I continue my educational journey at the Purdue University Department of Computer Science.</p>
+    <div class = "project">
+        <h1>Chessboard</h1>
+        <img src = "images/chessBoard.png">
+        <p>Uhhhh, Dummy text tALk about the project here</p>
+    </div>
 </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
