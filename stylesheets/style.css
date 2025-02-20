@@ -1,14 +1,14 @@
 @font-face{
     font-family:"autumn-moose";
-    src: url("/fonts/Autumn_Moose.ttf") format("truetype");
+    src: url("../fonts/Autumn_Moose.ttf") format("truetype");
 }
 @font-face{
     font-family:"Poppins-SemiBold";
-    src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
+    src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
 }
 @font-face{
     font-family:"Poppins";
-    src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+    src: url("../fonts/Poppins-Regular.ttf") format("truetype");
 }
 :root{
 --gray:#111;
@@ -23,6 +23,7 @@
 --sansSemiBold: "Poppins-SemiBold";
 --sans:"Poppins";
 --blue: #2f5668;
+--navBackHeight:100px;
 }
 html{
     margin-top:-8px;
@@ -210,6 +211,12 @@ margin-right:100px;
 .themePicker input{
     margin-top:20px;
     margin-left:10px;
+}
+.center{
+   display:flex;
+   justify-content: center;
+   align-items: center; 
+   text-align: center;
 }
 @media screen and (max-width: 600px){
     body{
