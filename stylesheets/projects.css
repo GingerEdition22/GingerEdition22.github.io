@@ -29,6 +29,7 @@ max-height:20vh;
 padding-top:15px;
 padding-bottom: 15px;
 padding-left:20px;
+border-radius: 30px;
 }
 .projectPanel .textBox{
     display:flex;

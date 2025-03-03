@@ -1,2 +1,27 @@
-404
-Hey it looks like you're on the wrong page. (If you're curious I plan I making this book better later)
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Goldfuss</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/navigation.css">
+    <link rel="stylesheet" href = "stylesheets/projects.css">
+    <link rel="stylesheet" href = "stylesheets/projects.css">
+    <link rel="stylesheet" href = "stylesheets/footer.css">
+    <link rel="stylesheet" href = "stylesheets/header.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="scripts/scrolling.js"></script>
+    <script src = "scripts/onload.js"></script>
+    <script src = "scripts/other.js"></script>
+</head>
+
+
+<body onload = "onLoadFunc()">
+    <p style = "color:white;">404 Error</p>
+    <script>
+        const path = window.location.pathname;
+        if (path.startsWith("/projects/")) {
+            window.location.replace("/projects/index.html" + "?page=" + path.split("/").pop());
+        }
+    </script>
+</body>

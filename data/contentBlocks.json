@@ -46,11 +46,12 @@
 "image":"images/DiscoveryDepthsLogo.svg",
 "link":"https://ntacs.itch.io/discovery-depths"
 },
-{        "header":"The Messaging System",
+
+{        "header":"Floor Plan to Front Door",
     "visible":true,
-"body":"A system for sending and recived text messages with Google Sheets. Built as an experiment for the capabilities of Sheets and Shortcuts.",
-"image":"images/GutsquareIconWhite.png",
-"link":"https://ntacs.itch.io/discovery-depths"
+"body":"A House designed for Habitat For Humanity.",
+"image":"contentBlockImages/houseRender.png",
+"link":"https://gingeredition22.github.io/projects/habitat"
 }
 
 ]
