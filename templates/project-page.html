@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href = "/portfolio#{{page.title}}" style = "text-decoration: none;"><- All projects</a>
+<h1 class="title">
+  {{ page.title }}
+</h1>
+<div class = "borderBox">
+<h3>Skills & Tools</h3>
+ <div class = "tagLinks">
+
+    {% for skill in page.taxonomies.skills %}
+    <p>{{skill}}</p>
+      {% endfor %}
+</div>
+</div>
+<div class="projectContent">
+{{ page.content | safe }}
+</div>
+{% endblock content %}

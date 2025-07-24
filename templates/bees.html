@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  {{ section.title }}
+</h1>
+
+<h2>Okay, if you're here you're probably wondering who this guy <img class="inTextIcon" src = "/bees/SadBee_3D_no_bg.png">is.</h2>
+<p>Well, that's SadBee. Yeah, it's "SadBee", not "sad bee" or "sad-bee" or anything. Don't ask why that is, cause I honestly don't know, that's just how I've always written it.</p>
+<h3>Yeah... But who is SadBee?</h3>
+<p> He's my little mascot, who has slowly evolved into my logo. Here's a brief history:</p>
+<p>One day I was designing a bee to print out to decorate a door for a school project. I decided to make some happy bees, and some who seemed to be surpised by something. But I realized maybe I needed a sad bee to add some interest. Upon printing the bee my teacher (fairly so) didn't want to use it in the project. I ended up walking into my next period and upon sitting down another classmate noticed this sad bee still on my computer. He said that I should make it my profile picture. After some tweaking (making it 3D, adding a background) I ended up with the SadBee of today. Since then the file SadBee is in has evolved to boast over 70 artboards of bees with various emotions and outfits.</p>
+<h2>Below are some of the bees I've desgined. Many have been left out as the bees come on different backgrounds and with different levels of 3D effects.</h2>
+
+<div>
+  {% for page in section.pages %}
+  <a href = "/bees/{{page.extra.bee_img}}.png" class="sectionLink" target="_blank">
+   <div class = "sectionItem" id = "{{page.extra.short_title}}">
+                  
+                    <h2>{{page.extra.short_title}}</h2>
+                    <img src = "/bees/{{page.extra.bee_img}}.png">
+                
+                   
+                </div>
+                 </a>
+  {% endfor %}
+</div>
+
+{% endblock content %}

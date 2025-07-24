@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  {{ section.title }}
+</h1>
+
+<div class = "articlesContainer">
+  <!-- If you are using pagination, section.pages will be empty.
+       You need to use the paginator object -->  
+  {% for page in section.pages %}
+ <div class = "textCard">
+                    <div class = "articleContent"> <p class = "themeOne">GingerEdition ~$ </p> {{page.title | safe}}<a class = "readMore" href = "{{ page.permalink }}#continue-reading">Read More</a></div>
+                        
+                </div>
+  {% endfor %}
+</div>
+{% endblock content %}

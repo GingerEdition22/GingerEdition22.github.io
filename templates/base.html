@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Goldfuss</title>
+    <link rel="stylesheet" href="/BeeDesignTwo.css">
+    <link rel="icon" type="image/png" href="/BeeYellow.png">
+</head>
+
+
+<body>
+
+<div class = "wrapper">
+    <div class = "mainContent">
+            <div id = "sideNav">
+
+<h3 class = "bounceRight"><a id="active" href = "/">
+<pre class = "ascii"> ____                 _      _ 
+|  _ \   __ _ __   __(_)  __| |
+| | | | / _` |\ \ / /| | / _` |
+| |_| || (_| | \ V / | || (_| |
+|____/  \__,_|  \_/  |_| \__,_|
+                </pre>
+                </a></h3>
+                   <!-- <h2 class = "bounceRight"><a id="active" href = "/">david goldfuss</a></h2>-->
+                    <h2 class = "bounceRight"><a href = "/about">about</a></h2>
+                    <h2 class = "bounceRight"><a href = "/posts">articles</a></h2>
+                    <h2 class = "bounceRight"><a href = "/quicknotes">quicknotes</a></h2>
+                    <h2 class = "bounceRight"><a href = "/portfolio">portfolio</a></h2>
+                    <a href = "/bees">
+                    <img src = "/BeeYellow.png" class = "beeLogo">
+                    </a>
+            
+            </div>
+
+            <div id="landingContent">
+           <section class="section">
+    <div class="container">
+      {% block content %} {% endblock content %}
+    </div>
+  </section>
+
+            </div>
+
+
+</div> <!--END mainContent-->
+
+
+<footer id = "footer">
+     <div class = "socialBar">
+ <a href = "https://github.com/GingerEdition22" target = "_blank"><img src = "/social/github_logo.png"></a>
+ <a href = "https://instagram.com/davidgoldfuss" target = "_blank"><img src = "/social/ig_logo.png"></a>
+ <a href = "https://dribbble.com/GingerEdition" target = "_blank"><img src = "/social/dribbble_logo.png"></a>
+ <a href = "mailto:davidgoldfuss@outlook.com" target = "_blank"><img src = "/social/email_logo.png"></a>
+ <a href = "/feeds"><img src = "/social/RSS_Logo.png"></a>
+ </div>
+    <p>01000111 01110010 01100101 01101110 01101111 01110101 01101001 01101100 01101100 01100101 </p>
+    <p>Powered by handwritten HTML, CSS, and a dash of 
+        <span class = "magic"> 
+            <span style="--i:0">m</span>
+            <span style="--i:1">a</span>
+            <span style="--i:2">g</span>
+            <span style="--i:3">i</span>
+            <span style="--i:4">c</span>
+        </span>
+    </p>
+    <p class = "versionNumber"><a href = "/versions"> Version : 0.1.0 - Teddy Bear Bee (alpha)</a></p>
+</footer>
+</div> <!--END wrapper-->
+</body>

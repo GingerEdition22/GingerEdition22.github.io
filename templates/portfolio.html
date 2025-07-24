@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  {{ section.title }}
+</h1>
+<div>
+  {% for page in section.pages %}
+  <a href =
+                    {%- if page.extra.projectLink -%}
+                      " {{page.extra.projectLink}}" target="_blank"
+                    {%- else -%}
+                   " {{ page.permalink }}#continue-reading"
+                    {%- endif -%}
+                      class = "hiddenLink">
+   <div class = "contentCard" id = "{{page.title}}">
+                  
+                    <h2>{{page.title}}</h2>
+                    <div class = "projectImgContainer">
+                    {{page.summary | safe}}
+                    </div>
+                    <div class = "tagLinks">
+                    {% for skill in page.taxonomies.skills %}
+                        <button href = "{{get_taxonomy_url(kind='skills',name=skill)}}">{{skill}}</button>
+                        {% endfor %}
+                    </div>
+                   
+                </div>
+                 </a>
+  {% endfor %}
+</div>
+{% endblock content %}

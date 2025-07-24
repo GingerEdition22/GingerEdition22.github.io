@@ -1,0 +1,457 @@
+
+:root{
+--trueGray:#141414;
+--trueGrayDark: #000;
+--textWhite: #eee;
+--themeOne: #eea243;
+--themeOneDark: #ca822a;
+--themeTwo: #f25f5c; 
+--themeTwoDark: #c94543;
+}
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* FRAMEWORK */
+html, body{
+    background-color: #101010;
+    height: 100%;
+}
+body::before{
+    content: " ";
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));;
+    z-index: 2;
+    background-size: 100% 5px, 3px 100%;
+    pointer-events: none;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+a{
+    font-family: "Space Mono", monospace;
+    color:var(--themeOne);
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--textWhite);
+    font-family: "Oswald", sans-serif;
+      font-weight: 400;
+}
+p, pre{
+    font-family: "Space Mono", monospace;
+    color: var(--textWhite);
+}
+.pageContents img{
+max-width:100%;
+margin-top:10px;
+}
+/* END FRAMEWORK */
+
+/* LINKS */
+/*** Default link ***/
+p a:not(.hiddenLink){
+    color: var(--themeOne);
+       position:relative;
+    display:inline-block;
+    z-index: 1;
+    transition: 500ms;
+    text-decoration: none;
+}
+p a:not(.hiddenLink)::after{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--themeOne);
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: opacity 700ms, transform 500ms ease-in-out;
+}
+p a:not(.hiddenLink):hover::after{
+    opacity: 1;
+    transform: scaleX(1); 
+    transform-origin: left;
+}
+/*** Link that should not be underlined ***/
+.hiddenLink{
+    text-decoration: none;
+    color:white;
+}
+/* END LINKS */
+
+/* SIDENAV */
+#sideNav{
+    margin-left:50px;
+    position:fixed;
+        
+}
+#sideNav h2{
+     font-family: "Oswald", sans-serif;
+     text-transform: uppercase;
+      font-weight: 400;
+      color: var(--textWhite);
+      padding:0px;
+      margin:0px;
+}
+#sideNav a{
+    color: var(--textWhite);
+    text-decoration: none;
+    transition: .3s;
+    
+}
+#sideNav a:hover{
+    color: var(--themeOneDark);
+}
+#sideNav a:active, #sideNav a#active{
+    color: var(--themeOne);
+}
+
+#sideNav img{
+    margin-top: 25px;
+    width: 45px;
+}
+.beeLogo{
+    transition: 0.2s;
+}
+.beeLogo:hover{
+    rotate: z 45deg;
+}
+
+/* END SIDENAV */
+
+
+/* LANDING / MAIN CONTENT */
+
+/*** The container for the main content ***/
+.mainContent{
+    margin-top:100px;
+    flex:1;
+    display: flex;
+}
+/*** The landing content on the page ***/
+#landingContent{
+    margin-left:auto;
+    margin-right: auto;
+    color: var(--textWhite);
+    width:50%;
+
+}
+/* END LANDING / MAIN CONTENT */
+
+
+
+
+/* FOOTER */
+#footer{
+    margin: auto;
+    width:70%;
+    margin-top: 15px;
+}
+#footer p{
+    text-align: center;
+    color: var(--themeOne)
+}
+#footer td{
+    width:33.333%
+}
+#footer td img{
+    width: 25%;
+    margin-right:0px;
+}
+
+.socialBar{
+    width:100%;
+    text-align: center;
+}
+.socialBar img{
+    width:35px;
+    vertical-align:middle;
+    margin:2px;
+    transition: .5s;
+}
+.socialBar img:hover{
+    rotate: z 22deg;
+}
+
+.frogCard{
+    margin-top:25px;
+    margin-bottom:25px;
+    text-align: center;
+}
+.frogCard img{
+    margin-bottom:15px;
+    width:40%;
+}
+
+.versionNumber{
+    font-size: 12px;
+}
+
+/* END FOOTER */
+
+
+/* EFFECTS */
+
+.magic span{
+    margin:-3px;
+     position: relative;
+    display: inline-block;
+    animation: magicWords 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    color: HSL(calc((255/5)*var(--i)),75%,60%)
+}
+
+@keyframes magicWords{
+    0%,40%,100%{
+        transform: translateY(0)
+    }
+    20%{
+        transform: translateY(-15px);
+    }
+}
+
+.bounceRight:hover{
+    animation: bounceRight 1s;
+}
+@keyframes bounceRight{
+    0%,40%,100%{
+        transform: translateX(0)
+    }
+    20%{
+        transform: translateX(15px);
+    }
+}
+em::before{
+    content: "✨";
+}
+em::after{
+    content:"✨";
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+.ascii{
+    font-family: "Roboto Mono",monospace;
+    font-weight: 600;
+    margin-bottom: -25px;
+}
+.inTextIcon{
+    height:2em;
+    margin-left:.2em;
+    margin-right:.2em;
+}
+/* END EFFECTS */
+
+/* DEFAULT CARDS */
+/*** The base card that all other cards draw style from ***/
+.card, .contentCard, .articleCard, .textCard{
+background-color: var(--trueGray);
+    border: var(--themeOne) solid 2px; 
+    
+    display: inline-block;
+    
+    border-radius: 25px;
+    
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  
+  box-shadow: 5px 5px 10px var(--trueGrayDark);
+}
+
+/*** Images within a card ***/
+.card img, .contentCard img, .articleCard img, .textCard img{
+border-radius: 25px;
+}
+
+/*** A card with padding optimized for displaying text ***/
+.textCard{
+    padding:10px;
+    padding-left:15px;
+}
+
+/*** A card designed for displaying basic and clickable content (used in portfolio)***/
+.contentCard{
+    width:85%;
+    min-height:100px;
+    margin:auto;
+    transition: .5s;
+    padding-left:25px;
+    padding-right: 25px;
+    margin-bottom: 15px;
+}
+.contentCard:hover{
+    transform: translate(5px,5px);
+}
+.contentCard h2{
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    color: var(--textWhite);
+}
+.contentCard p{
+    margin-top:-7px;
+}
+
+/* END CARDS */
+
+/* PORTFOLIO */
+.projectImgContainer img{  /* Used to correctly scale images within the portfolio page */
+    width:50%;
+}
+
+/*** tagLinks is the container (div) to display clickable chips for tags ***/
+.tagLinks{
+    margin-bottom: 20px;
+}
+.tagLinks button, .tagLinks p, .tagLinks a{
+    font-family: "Space Mono", monospace;
+    color: var(--textWhite);
+    border: var(--textWhite) solid 1px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 7px;
+    padding: 5px;
+    display: inline;
+    font-size: 12px;
+    transition: .5s;
+    text-decoration: none;
+}
+.tagLinks button:hover, .tagLinks a:hover{
+    border: var(--themeOne) solid 1px;
+    background-color: var(--themeOne);
+    color: var(--trueGrayDark);
+}
+
+.tagLinks button:hover, .tagLinks a:hover{
+    background-color: var(--themeOneDark);
+    border: var(--themeOne) solid 1px;
+    color: var(--trueGrayDark);
+}
+/* END PORTFOLIO */
+
+/* ARTICLES */
+
+.articlesContainer{
+    border-left: var(--themeOne) 2px solid;
+    padding-left: 20px;
+}
+.articleCard{
+width:85%;
+min-height:100px;
+border-radius: 25px 25px 25px 0px;
+margin:auto;
+    margin-bottom: 25px;
+    padding-left:15px;
+    padding-right:15px;
+    animation: none !important;
+}
+.articleCard .articleContent::before{
+    content: "";
+    position: relative;
+    display: inline-block;
+    width:15px;
+    height:15px;
+    outline: var(--themeOne) 2px solid;
+    background-color: var(--trueGray);
+    border-radius: 1000px;
+    left:-45.5px;
+
+}
+.themeOne{
+    color:var(--themeOne)
+}
+.articleContent{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.articleContent p{
+    display: inline;
+}
+
+.allTagsLink{
+    margin-bottom: 15px;
+    display: block;
+}
+
+.readMore{
+    display:inline;
+}
+.borderBox{
+    border: var(--textWhite) 1px solid;
+    border-radius: 25px;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+/* END ARTICLES */
+
+.projectContent img{
+    width:25%;
+    margin:auto;
+    display:block;
+}
+
+/* BASIC SECTION */
+.sectionLink{
+    text-decoration: none;
+}
+.sectionItem{
+    border-left: var(--themeOne) 3px solid;
+    padding-left: 20px;
+}
+.sectionHighlight{
+    border-left: var(--themeTwo) 3px solid;
+    padding-left: 20px;
+}
+.sectionItem img{
+    width:25%;
+}
+/* END BASIC SECTION */
+
+/* HOME FLEX GRID */
+.gridColumn {
+    flex: 50;
+    max-width:100%;
+    padding: 0px 10px;
+}
+.gridRow{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left:-10px;
+}
+.gridColumn div{
+    width:100%;
+    margin-top:15px;
+    vertical-align: middle;
+    border: var(--themeOne) 2px solid;
+    border-radius: 22px;
+}
+.gridColumn div * {
+    padding-left:10px;
+}
+
+/* END HOME FLEX GRID */
+
+/* 404 PAGE */
+.div404{
+text-align: center;
+height:100%;
+margin-top:50px;
+}
+.div404 a{
+    margin-top:20px;
+    display:block;
+}
+/* END 404 PAGE */

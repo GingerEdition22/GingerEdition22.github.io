@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  {{ section.title }}
+</h1>
+
+<div class = "articlesContainer">
+  <!-- If you are using pagination, section.pages will be empty.
+       You need to use the paginator object -->  
+  {% for page in section.pages %}
+ <div class = "articleCard" id = "{{page.title}}">
+                    <div class = "articleContent"> <p class = "themeOne">GingerEdition ~$ </p> {{page.summary | safe}}<a class = "readMore" href = "{{ page.permalink }}#continue-reading">Read More</a></div>
+                    <div class = "tagLinks">
+
+                      {% for tag in page.taxonomies.tags %}
+                        <a href = "{{get_taxonomy_url(kind='tags',name=tag)}}">{{tag}}</a>
+                        {% endfor %}
+                        </div>
+                        
+                </div>
+  {% endfor %}
+</div>
+{% endblock content %}

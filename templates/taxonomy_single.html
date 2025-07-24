@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Tag: {{term.name}}
+</h1>
+<a href = "/tags" class = "allTagsLink">See all tags</a>
+
+  {% for page in term.pages %}
+ 
+   <a href = "{{page.permalink}}" class = "sectionLink">
+ <div id = "{{page.title}}" class = "sectionItem">
+                
+                  <h3>{{page.title | safe}}</h3>
+                  <p>{{page.summary | safe}} More</p>
+                   
+    </div>
+    </a> 
+  {% endfor %}
+ 
+{% endblock content %}
